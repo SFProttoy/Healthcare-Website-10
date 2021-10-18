@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name": "CT SCAN",
+    "price": 55,
+    "description": "Computed tomography (CT) scan is a useful diagnostic tool for detecting diseases and injuries. It uses a series of X-rays and a computer to produce a 3D image of soft tissues and bones. CT is a painless, noninvasive way for your healthcare provider to diagnose conditions.",
+    "img": "https://i.ibb.co/F33v9xw/pricing1.jpg"
+  },
+  {
+    "id": 2,
+    "name": "X-RAY",
+    "price": 20,
+    "description": "An X-ray, or, much less commonly, X-radiation, is a penetrating form of high-energy electromagnetic radiation. Most X-rays have a wavelength ranging from 10 picometers to 10 nanometers, corresponding to frequencies in the range 30 petahertz to 30 exahertz.",
+    "img": "https://i.ibb.co/hCpmfZc/pricing2.jpg"
+  },
+  {
+    "id": 3,
+    "name": "ECG TEST",
+    "price": 30,
+    "description": "A cardiac stress test is a cardiological test that measures the heart's ability to respond to external stress in a controlled clinical environment. The stress response is induced by exercise or by intravenous pharmacological stimulation. ",
+    "img": "https://i.ibb.co/tZRRY5p/pricing3.jpg"
+  },
+  {
+    "id": 4,
+    "name": "LIPID PROFILE",
+    "price": 20,
+    "description": "A lipid profile or lipid panel is a panel of blood tests used to find abnormalities in lipids, such as cholesterol and triglycerides. The results of this test can identify certain genetic diseases and can determine approximate risks for cardiovascular disease.",
+    "img": "https://i.ibb.co/bW8CbPV/pricing4.jpg"
+  },
+  {
+    "id": 5,
+    "name": "BLOOD SUGAR",
+    "price": 10,
+    "description": "Blood sugar, or glucose, is the main sugar found in your blood. It comes from the food you eat, and is your body's main source of energy. Your blood carries glucose to all of your body's cells to use for energy. Diabetes is a disease in which your blood sugar levels are too high.",
+    "img": "https://i.ibb.co/8BsN5pf/pricing5.jpg"
+  },
+  {
+    "id": 6,
+    "name": "ROOT CANAL",
+    "price": 30,
+    "description": "Root canal treatment (endodontics) is a dental procedure used to treat infection at the centre of a tooth. Root canal treatment is not painful and can save a tooth that might otherwise have to be removed completely.",
+    "img": "https://i.ibb.co/T8j34hj/pricing6.jpg"
+  }
+]

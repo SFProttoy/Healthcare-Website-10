@@ -1,0 +1,14 @@
+.time {
+  width: 75%;
+  background-color: #3498db;
+  border-radius: 20px;
+}
+
+Col {
+  padding: 25px;
+}
+.time h3,
+h5 {
+  color: #fff;
+  margin: 10px 0;
+}

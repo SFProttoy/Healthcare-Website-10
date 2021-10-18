@@ -1,0 +1,15 @@
+.card-data {
+  height: 480px;
+  background-color: #f8f8f8;
+  transition: transform 0.5s;
+  box-shadow: 20px 15px 12px grey;
+}
+
+.card-data:hover {
+  transform: translateY(10px);
+}
+
+.info {
+  text-align: justify;
+  font-size: 16px;
+}
