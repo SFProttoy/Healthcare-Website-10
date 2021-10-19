@@ -1,8 +1,16 @@
+import {
+  faAmbulance,
+  faClinicMedical,
+  faPhone,
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { Col, Row } from "react-bootstrap";
 import "./Time.css";
-
 const Time = () => {
+  const ambulance = <FontAwesomeIcon icon={faAmbulance} />;
+  const call = <FontAwesomeIcon icon={faPhone} />;
+  const bed = <FontAwesomeIcon icon={faClinicMedical} />;
   return (
     <div>
       <div className="mt-5 time mx-auto">
@@ -14,10 +22,10 @@ const Time = () => {
           </Col>
           <Col className="p-4">
             <h3>Emergency Services</h3>
-            <h5>Intensive Care Unit(ICU) Booking</h5>
-            <h5>Ambulance Call</h5>
+            <h5>{bed} Intensive Care Unit(ICU) Booking</h5>
+            <h5>{ambulance} Ambulance Call</h5>
             <p className="fw-bold fs-3 text-white">
-              Call Us Any Time: +88012344568
+              {call} Call Us Any Time: +88012344568
             </p>
           </Col>
         </Row>

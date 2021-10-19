@@ -1,5 +1,6 @@
 import {
   faFacebook,
+  faGooglePlus,
   faInstagram,
   faLinkedin,
   faYoutube,
@@ -14,6 +15,7 @@ const Footer = () => {
   const ld = <FontAwesomeIcon icon={faLinkedin} />;
 
   const ig = <FontAwesomeIcon icon={faInstagram} />;
+  const g = <FontAwesomeIcon icon={faGooglePlus} />;
 
   return (
     <div className="footer">
@@ -35,6 +37,7 @@ const Footer = () => {
           <span className="icons">{yt}</span>
           <span className="icons">{ld}</span>
           <span className="icons">{ig}</span>
+          <span className="icons">{g}</span>
         </div>
       </div>
       <hr className="mx-auto hr" />
