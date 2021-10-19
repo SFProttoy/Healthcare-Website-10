@@ -1,0 +1,39 @@
+[
+  {
+    "id": 1,
+    "name": "Bill Howard",
+
+    "degrees": "MBBS, BMBS, MBChB, MBBCh",
+    "specialist": "Surgery",
+    "img": "https://i.ibb.co/WDgb7pd/d1.jpg"
+  },
+  {
+    "id": 2,
+    "name": "William Selena",
+
+    "degrees": "MBBS, B.Med",
+    "specialist": "Medicine",
+    "img": "https://i.ibb.co/9ssjmgR/d2.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Gareth Graham",
+    "specialist": "Dentist",
+    "degrees": "BDS, BAMS",
+    "img": "https://i.ibb.co/MDJ01FW/d3.png"
+  },
+  {
+    "id": 4,
+    "name": "Ruther Ford",
+    "specialist": "Physician",
+    "degrees": "MBBS, MPhil",
+    "img": "https://i.ibb.co/TqbDG7y/d4.png"
+  },
+  {
+    "id": 5,
+    "name": "Angela",
+    "specialist": "Surgeon",
+    "degrees": "MBBS, MS, MSurg, MChir, MCh, ChM, CM",
+    "img": "https://i.ibb.co/MffJ6d4/d5.png"
+  }
+]

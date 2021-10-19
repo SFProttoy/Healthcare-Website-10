@@ -8,6 +8,7 @@ import PrivateRoute from "./components/Login/PrivateRoute/PrivateRoute";
 import Register from "./components/Login/Register/Register";
 import NotFound from "./components/NotFound/NotFound";
 import ServiceDetails from "./components/ServiceDetails/ServiceDetails";
+import Thanks from "./components/Thanks/Thanks";
 import AuthProvider from "./contexts/AuthProvider";
 import Footer from "./Shared/Footer";
 import Header from "./Shared/Header";
@@ -25,9 +26,12 @@ function App() {
             <Route path="/home">
               <Home></Home>
             </Route>
-            <Route path="/doctors">
+            <PrivateRoute exact path="/doctors">
               <Doctors></Doctors>
-            </Route>
+            </PrivateRoute>
+            <PrivateRoute path="/doctors/thanks">
+              <Thanks></Thanks>
+            </PrivateRoute>
             <Route path="/about">
               <About></About>
             </Route>

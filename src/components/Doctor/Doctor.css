@@ -1,0 +1,10 @@
+.data {
+  height: 700px;
+  background-color: #f8f8f8;
+  transition: transform 0.5s;
+  box-shadow: 20px 15px 12px grey;
+}
+
+.data:hover {
+  transform: translateY(10px);
+}

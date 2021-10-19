@@ -1,9 +1,15 @@
 import React from "react";
-
+import { Image } from "react-bootstrap";
+import "./NotFound.css";
 const NotFound = () => {
   return (
     <div>
-      <h1>Not found</h1>
+      <Image
+        className="notfound"
+        src="https://i.ibb.co/VYFz3zx/404.jpg"
+        alt="nf"
+        fluid
+      />
     </div>
   );
 };

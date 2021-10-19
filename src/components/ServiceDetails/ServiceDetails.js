@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { useParams } from "react-router";
+import "./ServiceDetails.css";
 
 const ServiceDetails = () => {
   const { serviceId } = useParams();
@@ -24,13 +25,17 @@ const ServiceDetails = () => {
 
   return (
     <Container>
-      <Row className="mt-5 d-flex justify-content-center align-items-center">
+      <Row
+        xs={1}
+        md={2}
+        className="mt-5 d-flex justify-content-center align-items-center"
+      >
         <Col>
-          <img style={{ width: "700px", height: "500px" }} src={img} alt="" />
+          <img className="details-img" src={img} alt="" />
         </Col>
         <Col>
           <h1>{name}</h1>
-          <p className="mt-5 mb-4 fs-5">{description}</p>
+          <p className="mt-5 mb-4 fs-5 details-para">{description}</p>
           <h5 className="text-dark fw-bolder">Price: ${price}</h5>
         </Col>
       </Row>

@@ -32,7 +32,7 @@ const Header = () => {
               Home
             </Nav.Link>
             <Nav.Link className="link" as={Link} to="/doctors">
-              Our Doctors
+              Appiontment
             </Nav.Link>
             <Nav.Link className="link" as={Link} to="/about">
               About us
