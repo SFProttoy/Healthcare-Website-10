@@ -7,7 +7,7 @@ import "./Banner.css";
 const Banner = () => {
   return (
     <div className="slider">
-      <Carousel>
+      <Carousel className="">
         <Carousel.Item>
           <img className="d-block w-100" src={slider1} alt="First slide" />
           <Carousel.Caption>

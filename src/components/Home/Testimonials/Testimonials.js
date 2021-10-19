@@ -8,7 +8,7 @@ const Testimonials = () => {
       <h2>
         Patients <span style={{ color: "#E74C3C" }}>Experiences</span>
       </h2>
-      <Row>
+      <Row className="w-100">
         <Col>
           <Card className="card-data mt-4 reviews mx-auto">
             <Card.Img
