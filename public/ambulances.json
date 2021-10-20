@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "rent": 150,
+    "img": "https://i.ibb.co/prz6PWK/amb1.jpg"
+  },
+  {
+    "id": 2,
+    "rent": 100,
+    "img": "https://i.ibb.co/rMw3ydN/amb2.jpg"
+  },
+  {
+    "id": 3,
+    "rent": 200,
+    "img": "https://i.ibb.co/0FVsYVQ/amb3.jpg"
+  },
+  {
+    "id": 4,
+    "rent": 100,
+    "img": "https://i.ibb.co/djGgY0H/amb4.jpg"
+  },
+  {
+    "id": 5,
+    "rent": 150,
+    "img": "https://i.ibb.co/260S35K/amb5.jpg"
+  },
+  {
+    "id": 5,
+    "rent": 150,
+    "img": "https://i.ibb.co/25HpbNb/amb6.jpg"
+  }
+]

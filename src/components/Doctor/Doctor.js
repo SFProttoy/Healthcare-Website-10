@@ -19,7 +19,7 @@ const Doctor = (props) => {
               Specialist: {specialist}
             </p>
 
-            <Link to={`/doctors/thanks`}>
+            <Link to={`/information`}>
               <Button className="btn btn-primary button">
                 Make Appointment
               </Button>

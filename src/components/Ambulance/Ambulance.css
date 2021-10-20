@@ -1,0 +1,12 @@
+.amb {
+  width: 350px;
+  height: 400px;
+}
+.amb-btn {
+  width: 100px;
+}
+@media only screen and (max-width: 688px) {
+  .amb {
+    width: 100%;
+  }
+}
