@@ -1,9 +1,10 @@
-import Button from "@restart/ui/esm/Button";
 import React from "react";
-import { Form } from "react-bootstrap";
+import { Button, Form } from "react-bootstrap";
+import { useHistory, useLocation } from "react-router";
 import { Link } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 import "./Login.css";
+
 const Login = () => {
   const {
     handleEmailInput,
@@ -11,13 +12,42 @@ const Login = () => {
     handleLogin,
     error,
     googleSignIn,
+    setLoading,
+    setError,
+    setPath,
   } = useAuth();
+
+  const location = useLocation();
+  const history = useHistory();
+
+  const redirect_url = location.state?.from || "/";
+  setPath(location.state?.from);
+  const handleGoogleSignIn = () => {
+    googleSignIn()
+      .then((result) => {
+        history.push(redirect_url);
+      })
+      .finally(() => setLoading(false));
+  };
+
+  const login = (e) => {
+    e.preventDefault();
+    handleLogin()
+      .then((result) => {
+        history.push(redirect_url);
+        setError("");
+      })
+      .catch((err) => {
+        setError(err.message);
+      });
+  };
+
   return (
     <div className="login mx-auto">
       <h3 className="mt-5 fw-bold" style={{ color: "#ff4747" }}>
         Please Login
       </h3>
-      <Form onSubmit={handleLogin} className="p-3">
+      <Form onSubmit={login} className="p-3">
         <Form.Group className="size mx-auto mb-5" controlId="formBasicEmail">
           <Form.Control
             onBlur={handleEmailInput}
@@ -47,10 +77,10 @@ const Login = () => {
         </Link>
       </p>
       <p className="fw-bold text-dark ">Or, login with</p>
-      <Button className="google-btn" onClick={googleSignIn}>
+      <Button className="google-btn" onClick={handleGoogleSignIn}>
         <svg
           aria-hidden="true"
-          class="native svg-icon iconGoogle"
+          className="native svg-icon iconGoogle"
           width="22"
           height="20"
           viewBox="0 0 18 18"

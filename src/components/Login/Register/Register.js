@@ -1,9 +1,8 @@
-import Button from "@restart/ui/esm/Button";
 import React from "react";
-import { Form } from "react-bootstrap";
+import { Button, Form } from "react-bootstrap";
+import { useHistory } from "react-router";
 import { Link } from "react-router-dom";
 import useAuth from "../../../hooks/useAuth";
-
 const Register = () => {
   const {
     error,
@@ -12,13 +11,51 @@ const Register = () => {
     handlePasswordInput,
     handleRegistration,
     googleSignIn,
+    setLoading,
+    path,
+    saveName,
+    setError,
+    password,
   } = useAuth();
+
+  const history = useHistory();
+  const redirect_url = path || "/";
+
+  const handleGoogleSignIn = () => {
+    googleSignIn()
+      .then((result) => {
+        history.push(redirect_url);
+      })
+      .finally(() => setLoading(false));
+  };
+
+  const registration = (e) => {
+    e.preventDefault();
+    if (password.length < 6) {
+      setError("Password should be at least 6 characters");
+      return;
+    }
+    if (!/(?=.*[!@#$%^&*])/.test(password)) {
+      setError("Password must contain one special character");
+      return;
+    }
+    handleRegistration()
+      .then((result) => {
+        saveName();
+        history.push(redirect_url);
+        setError("");
+      })
+      .catch((err) => {
+        setError(err.message);
+      });
+  };
+
   return (
     <div className="login mx-auto">
       <h3 className="mt-5 fw-bold" style={{ color: "#ff4747" }}>
         Please Registration
       </h3>
-      <Form onSubmit={handleRegistration} className="p-5">
+      <Form onSubmit={registration} className="p-5">
         <Form.Group className="size mx-auto mb-5" controlId="formBasicName">
           <Form.Control
             onBlur={handleNameInput}
@@ -56,10 +93,10 @@ const Register = () => {
         </Link>
       </p>
       <p className="fw-bold text-dark">Or, Sign up with</p>
-      <Button className="google-btn" onClick={googleSignIn}>
+      <Button className="google-btn" onClick={handleGoogleSignIn}>
         <svg
           aria-hidden="true"
-          class="native svg-icon iconGoogle"
+          className="native svg-icon iconGoogle"
           width="22"
           height="20"
           viewBox="0 0 18 18"

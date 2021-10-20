@@ -18,7 +18,6 @@ const ServiceDetails = () => {
       (service) => service.id === parseInt(serviceId)
     );
     setServiceDetails(findService[0]);
-    console.log(findService[0]);
   }
 
   const { name, description, img, price } = serviceDetails;
